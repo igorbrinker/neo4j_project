@@ -38,5 +38,18 @@ def generate_store():
 
         csv_store_file.write(str(brand_id) + ',' + str(store_id) + ',' + store_name + ',' +str(total_purchase_amount) + '\n')
 
-generate_store()
-generate_name()
+
+def generate_brand():
+    csv_brand_file.write('brand_id,brand_name\n')
+
+    for brand_index in range(10):
+        brand_id = brand_index
+        brand_name = str(names.get_last_name())
+
+        print(brand_index, brand_name)
+        csv_brand_file.write((str(brand_id) + ',') + brand_name + '\n')
+
+
+# generate_store()
+# generate_name()
+generate_brand()
